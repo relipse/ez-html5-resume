@@ -1,0 +1,2 @@
+rsync -vai --exclude=.git/ /root/util/web/resume /home/sharpmailer/public_html/resume && mv /home/sharpmailer/public_html/resume/public_html /home/sharpmailer/public_html/resume/jimkinsman
+
