@@ -45,6 +45,10 @@ ol.skills li {
 	margin-left: -20px;
 }
 
+footer {
+	text-align: center;
+}
+
 @media (max-width: 480px){
 	/* center for mobile*/
 	body h1, body h2 {
@@ -56,6 +60,7 @@ ol.skills li {
   }
   .employment li h4 .dates {
   	float: right;
+  	margin-right: 20px;
 	}
 	.employment li h4 .date.from {
 
