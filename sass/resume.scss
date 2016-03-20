@@ -1,0 +1,72 @@
+body {
+	font-family: Perpetua, Baskerville, 'Big Caslon', 'Palatino Linotype', Palatino, 'URW Palladio L', 'Nimbus Roman No9 L', serif;
+}
+
+h1.name {
+	font-size: 1.25em;	
+	margin-bottom: 0;
+}
+
+h1.job-title {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h2.location {
+	margin-top: 0;
+}
+
+ol.skills {
+	list-style-type: none;
+	padding: 0;
+	
+	li {
+		display: inline-block;
+	}
+}
+
+.employment ul.points {
+	margin-left: -34px;
+}
+
+.employment {
+	margin-left: -5px; 
+}
+
+.employment {
+	list-style-type: none;
+}
+
+.employment li h4 .client {
+	font-size: 1.25em;
+}
+
+.employment li h4 {
+	margin-left: -20px;
+}
+
+footer {
+	text-align: center;
+}
+
+@media (max-width: 480px){
+	/* center for mobile*/
+	body h1, body h2 {
+		text-align: center;
+	}
+  
+	.employment li h4 {
+		margin-bottom: 0;	
+	}
+	.employment li h4 .dates {
+		float: right;
+		margin-right: 20px;
+	}
+	.employment li h4 .date.from {
+
+	}
+	.employment li h4 .date.to::before {
+		content: '- ';
+	}
+}
+
