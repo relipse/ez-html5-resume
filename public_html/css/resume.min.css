@@ -21,34 +21,72 @@ ol.skills {
 .employment ul.points {
   margin-left: -34px; }
 
-.employment {
+ol.employment {
   margin-left: -5px; }
 
-.employment {
+ol.employment {
   list-style-type: none; }
 
 .employment li h4 .client {
-  font-size: 1.25em; }
+  font-size: 1.1em; }
 
 .employment li h4 {
   margin-left: -20px; }
 
+.employment li h4 .dates {
+  float: right;
+  margin-right: 20px;
+  font-size: .9em; }
+
 footer {
   text-align: center; }
+
+.employment li h4 {
+  margin-bottom: 0;
+  margin-top: 5px; }
+
+.employment li h4 .date.to::before {
+  content: '- '; }
+
+.education h3 {
+  margin-bottom: 0; }
+
+.education ul {
+  margin-top: 0; }
+
+.education h4 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.degree-study .study::before {
+  content: ' of '; }
+
+.fade-in {
+  -webkit-transition: opacity 3s, bottom 2s ease;
+  transition: opacity 3s, bottom 2s ease;
+  opacity: 1; }
+
+/** show that the sections are clickable **/
+section h3, section.employment ol li h4 {
+  color: blue;
+  cursor: pointer; }
+
+footer {
+  left: 0px;
+  bottom: 0px;
+  height: auto;
+  width: 100%; }
+
+footer p {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p.copyright {
+  display: none; }
 
 @media (max-width: 480px) {
   /* center for mobile*/
   body h1, body h2 {
-    text-align: center; }
-
-  .employment li h4 {
-    margin-bottom: 0; }
-
-  .employment li h4 .dates {
-    float: right;
-    margin-right: 20px; }
-
-  .employment li h4 .date.to::before {
-    content: '- '; } }
+    text-align: center; } }
 
 /*# sourceMappingURL=resume.min.css.map */

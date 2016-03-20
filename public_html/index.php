@@ -16,7 +16,9 @@
 <?php if (isset($cfg['google-plus-link'])): ?>
 <link rel="author" href="<?=$cfg['google-plus-link']?>"/>
 <?php endif; ?>
-<link rel="stylesheet" href="css/resume.css"/>
+<!-- using sass now to compile -->
+<link rel="stylesheet" href="css/resume.min.css"/>
+<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
 </head>
 
 <body>
@@ -44,8 +46,23 @@
 </ul>
 </section>
 
+<?php if (isset($cfg['education'])): ?>
+	<section class="education">
+	<h3>Education</h3>
+	<div class="container">
+	<?php foreach($cfg['education'] as $school): ?>
+	<h4><?=$school['school']?></h4>
+	<ul>
+	<li class="gpa">GPA: <?=$school['gpa']?></li>
+	<li class="degree-study"><span class="degree"><?=$school['degree']?></span><span class="study"><?=$school['study']?></span></li>
+	</ul>
+	<?php endforeach; ?>
+	</div>
+	</section>
+<?php endif; ?>
+
 <?php if (isset($cfg['employment'])): ?>
-<section class="emploment">
+<section class="employment">
 <h3>Employment</h3>
 	<ol class="employment">
 	<?php foreach($cfg['employment'] as $job): ?>
@@ -63,10 +80,12 @@
 	</ol>
 </section>
 <?php endif; ?>
+
 </main>
 
 <footer>
-<p>Copyright &copy; <?=date('Y')?> <?=$cfg['name']?></p>
+<p>Hire me: <a title="Send me an email and I will get back to you" href="mailto:<?=$cfg['email']?>"><?=$cfg['email']?></a></p>
+<p class="copyright">Copyright &copy; <?=date('Y')?> <?=$cfg['name']?></p>
 </footer>
 <script src="js/global.js"></script>
 <script src="js/page.index.js"></script>
