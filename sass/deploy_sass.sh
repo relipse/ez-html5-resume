@@ -1,3 +1,4 @@
 #!/bin/bash
-sass resume.scss ../public_html/css/resume.min.css
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+sass $DIR/resume.scss $DIR/../public_html/css/resume.min.css
 
