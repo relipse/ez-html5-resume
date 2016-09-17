@@ -42,13 +42,23 @@ ol.employment {
 }
 
 .employment li h4 {
+	overflow: hidden;
 	margin-left: -20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FFF;
+
+	&:hover {
+   	border-bottom: 1px dashed silver;
+	}
 }
 .employment li h4 .dates {
 	float: right;
 	margin-right: 20px;
   font-size: .9em;
 }
+
+
 
 footer {
 	text-align: center;
@@ -83,7 +93,9 @@ footer {
 	content: ' of ';
 }
 
-
+.achievements h4 .date::before {
+	content:' - ',
+}
 
 .fade-in{
 	-webkit-transition: opacity 3s, bottom 2s ease;

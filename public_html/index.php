@@ -81,10 +81,39 @@
 </section>
 <?php endif; ?>
 
+
+<?php if (isset($cfg['achievements'])): ?>
+<section class="achievements">
+<h3>Achievements</h3>
+<ol>
+	<?php foreach($cfg['achievements'] as $achieve): ?>
+	<li><h4><span class="name"><?=htmlentities($achieve['name'])?></span> <span class="sub-title"><?=htmlentities($achieve['sub-title'])?></span> <span class="date"><?=date('M j, Y', strtotime($achieve['date']))?></span></h4>
+	<?php if (isset($achieve['results'])): ?>
+	<ul>
+	<?php foreach($achieve['results'] as $key => $ary): ?>
+	<li><?=$key?>: 
+		<?php 
+		$first = true;
+		foreach($ary as $k=>$v): 
+  		if (!$first){ echo ', '; }
+			$first = false;
+		?>
+			<?=$k?>: <?=$v?>
+	  <?php endforeach; ?>
+	</li>
+	<?php endforeach; ?>
+	</ul>
+	<?php endif; ?>
+
+	</li>
+	<?php endforeach; ?>
+</ol>
+</section>
+<?php endif; ?>
 </main>
 
 <footer>
-<p>Hire me: <a title="Send me an email and I will get back to you" href="mailto:<?=$cfg['email']?>"><?=$cfg['email']?></a></p>
+<p>Interested? Contact me: <a title="Send me an email and I will get back to you" href="mailto:<?=$cfg['email']?>"><?=$cfg['email']?></a></p>
 <p class="copyright">Copyright &copy; <?=date('Y')?> <?=$cfg['name']?></p>
 </footer>
 <script src="js/global.js"></script>

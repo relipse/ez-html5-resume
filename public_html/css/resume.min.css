@@ -31,7 +31,13 @@ ol.employment {
   font-size: 1.1em; }
 
 .employment li h4 {
-  margin-left: -20px; }
+  overflow: hidden;
+  margin-left: -20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #FFF; }
+  .employment li h4:hover {
+    border-bottom: 1px dashed silver; }
 
 .employment li h4 .dates {
   float: right;
@@ -60,6 +66,9 @@ footer {
 
 .degree-study .study::before {
   content: ' of '; }
+
+.achievements h4 .date::before {
+  content: " - "; }
 
 .fade-in {
   -webkit-transition: opacity 3s, bottom 2s ease;
