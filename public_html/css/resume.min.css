@@ -17,6 +17,10 @@ ol.skills {
   padding: 0; }
   ol.skills li {
     display: inline-block; }
+    ol.skills li:after {
+      content: ", "; }
+    ol.skills li:last-child:after {
+      content: ""; }
 
 .employment ul.points {
   margin-left: -34px; }

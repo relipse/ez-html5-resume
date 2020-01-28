@@ -94,12 +94,16 @@
 	<li><?=$key?>: 
 		<?php 
 		$first = true;
+		if (is_array($ary)){
 		foreach($ary as $k=>$v): 
   		if (!$first){ echo ', '; }
 			$first = false;
 		?>
 			<?=$k?>: <?=$v?>
 	  <?php endforeach; ?>
+	  <?php }else{
+	  	echo $ary;
+	  }?>
 	</li>
 	<?php endforeach; ?>
 	</ul>
